@@ -15,6 +15,7 @@ Se usan **referencias** (no documentos incrustados) porque un autor puede tener 
 
 ```
 ├── data/                 # Datos de ejemplo (seed)
+├── public/               # Cliente web (HTML + CSS + JS)
 └── src/
     ├── app.js            # Servidor Express
     ├── seed.js           # Carga de datos de ejemplo
@@ -43,6 +44,21 @@ Se usan **referencias** (no documentos incrustados) porque un autor puede tener 
    ```bash
    npm run dev
    ```
+
+## Cliente web
+
+En la carpeta `public/` está el cliente hecho con **HTML, CSS y JavaScript puro**. Express lo sirve con `express.static("public")`, así que basta con levantar la API y abrir `http://localhost:3000` (en Codespaces: pestaña **PORTS**, puerto 3000).
+
+Permite consultar cómics (todos o filtrados por autor y/o editorial), agregar autores y agregar cómics.
+
+```
+public/
+├── index.html
+├── css/styles.css
+└── js/
+    ├── api.js   # Funciones que llaman a la API (fetch)
+    └── app.js   # Lógica de la interfaz
+```
 
 ## Endpoints
 
